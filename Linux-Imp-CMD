@@ -1,0 +1,11 @@
+Date : Jun 11-2023
+Rsync:   
+rsync -avxHAX --progress --human-readable /var/tmp/backup/forcare/ontxdst0gav001/users      /xdsdata/store/forcare/ontxdst0gav001/												
+Des: this command uses rsync to synchronize the contents of the /var/tmp/backup/forcare/ontxdst0gav001/users directory with the /xdsdata/store/forcare/ontxdst0gav001/ directory, 
+preserving attributes, permissions, and ownership, and displaying progress information during the transfer.
+
+Tar file extract:
+tar -xvf archive.tar --wildcards '*.txt'  #### To extract only files with a .txt extension from a tar file, 
+                                                you can use the --wildcards option in combination with the *.txt pattern.
+tar -xvf archive.tar example.txt ###### you have a tar file called archive.tar containing multiple files, and you want to extract only the file named example.txt.
+
