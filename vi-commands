@@ -1,63 +1,73 @@
-                                    VI Commands
-1. Introduction:
-   Vi (Visual Editor) or Vim (Vi Improved) is a popular text editor used in Unix-like systems. It offers powerful features and commands for efficient text editing.
+1. Definition:
+   Vi/Vim is a text editor widely used in Unix-like systems. It offers different modes for editing and navigating text files.
 
 2. Modes:
-   - Command Mode: The default mode when you open Vi/Vim. Used for executing commands.
-   - Insert Mode: Used for inserting and editing text.
-   - Visual Mode: Used for selecting and manipulating text visually.
+   - Command Mode:
+     - The default mode.
+     - Used for navigation, executing commands, and accessing other modes.
+   - Insert Mode:
+     - Used for inserting and editing text.
+   - Visual Mode:
+     - Used for selecting and manipulating text visually.
 
 3. Basic Commands:
    - Opening a file:
-     $ vi filename
+     `vi filename`
+     Opens the specified file in Vi for editing.
 
    - Switching to insert mode:
-     Press `i` to enter insert mode.
-     Example: Type "Hello, World!" in insert mode.
+     `i`
+     Press `i` to switch to insert mode. Type your desired text. Press `Esc` to return to command mode.
 
    - Saving and quitting:
      - Save changes and exit:
-       :wq
+       `:wq`
      - Quit without saving changes:
-       :q!
+       `:q!`
      - Save changes but don't quit:
-       :w
+       `:w`
 
    - Navigating within the file:
      - Move cursor left:
-       h
+       `h`
      - Move cursor right:
-       l
+       `l`
      - Move cursor up:
-       k
+       `k`
      - Move cursor down:
-       j
+       `j`
      - Move to the beginning of the line:
-       0
+       `0`
      - Move to the end of the line:
-       $
+       `$`
      - Move to the beginning of the file:
-       gg
+       `gg`
      - Move to the end of the file:
-       G
+       `G`
 
-   - Deleting text:
-     - Delete character under the cursor:
-       x
-     - Delete entire line:
-       dd
-     - Delete from the cursor to the end of the line:
-       d$
-     - Delete multiple lines (e.g., delete 3 lines):
-       3dd
+4. Copy and Paste Example:
+   Let's say you have the following lines of text:
 
-4. Example:
-   Let's open a file named "mydocument.txt" using Vi/Vim:
-   $ vi mydocument.txt
+   Hello
+   World
+   This is a sample text.
 
-   We are now in command mode. Press `i` to switch to insert mode and start typing your content. For example:
-   This is my first line.
-   This is my second line.
+   - Copying text:
+     - Move the cursor to the line you want to copy.
+     - Press `yy` to copy the entire line.
 
-   To save the changes and exit, press `Esc` to return to command mode, and then type:
-   :wq
+   - Pasting text:
+     - Move the cursor to the desired location.
+     - Press `p` to paste the copied line below the cursor.
+
+   Example:
+   1. Move cursor to the line "Hello."
+   2. Press `yy` to copy the line.
+   3. Move cursor to a new line.
+   4. Press `p` to paste the copied line below the cursor.
+   5. The line "Hello" will be duplicated below.
+
+   Hello
+   Hello
+   World
+   This is a sample text.
